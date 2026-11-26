@@ -1,0 +1,7 @@
+<div>
+    <h1>Nombre: {{ nombre() }}</h1>
+    <p>Edad: {{ edad() }}</p>
+    <img [src]="avatarUrl()" alt="Avatar" />
+    <p>Es mayor de edad: {{ esMayorDeEdad() ? 'Sí' : 'No' }}</p>
+    <button [disabled]="edad()>= 18 ? false: true">Comprar bebida</button>
+</div>

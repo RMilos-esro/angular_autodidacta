@@ -1,0 +1,12 @@
+<form [formGroup]="registro" (ngSubmit)="enviar()">
+  <input formControlName="usuario" placeholder="Usuario" />
+
+  <input formControlName="edad" placeholder="Edad" type="number" />
+  <button type="submit" [disabled]="registro.invalid">Enviar</button>
+  @if (registro.controls.edad.invalid && registro.controls.edad.touched) {
+    <p>La edad tiene que ser minimo 18</p>
+  }
+  @if (registro.controls.usuario.invalid && registro.controls.usuario.touched) {
+    <p>El usuario tiene que tener al menos 4 caracteres</p>
+  }
+</form>

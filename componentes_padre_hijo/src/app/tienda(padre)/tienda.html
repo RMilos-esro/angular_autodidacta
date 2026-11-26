@@ -1,0 +1,13 @@
+<app-tarjeta-producto
+  [nombreProducto]="'Nintendo Switch 2'"
+  [precioProducto]="499.95"
+  (botonClickado)="recibirMensaje($event)"
+></app-tarjeta-producto>
+
+<ul>
+  @for (producto of listaCarrito(); track producto) {
+    <li>{{ producto }}</li>
+  } @empty {
+    <li>No hay productos</li>
+  }
+</ul>

@@ -1,0 +1,6 @@
+@if (stringFrase() === '') {
+  <p>Frase no obtenida todavia</p>
+} @else {
+  <p>{{ stringFrase() }}</p>
+}
+<button (click)="obtenerNuevaFrase()">Nueva frase</button>

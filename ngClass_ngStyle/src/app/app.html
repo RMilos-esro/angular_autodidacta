@@ -1,0 +1,12 @@
+<!-- ngClass permite aplicar clases de manera dinamica -->
+<p [ngClass]="{ 'texto-rojo': tieneError(), 'texto-verde': !tieneError() }">
+  Estado del fromulario
+</p>
+
+<!-- ngStyle permite aplicar estilos de manera dinamica-->
+
+<p [ngStyle]="{ color: tieneError() ? 'red' : 'green', 'font-weight': 'bold' }">
+  Estado del formulario
+</p>
+
+<app-semaforo></app-semaforo>

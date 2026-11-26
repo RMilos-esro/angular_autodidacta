@@ -1,0 +1,18 @@
+<p>Contador: {{ contador() }}</p>
+<!--Para actualizar el valor de un signal, se llama a su método set -->
+<button (click)="contador.set(contador() + 1)">Incrementar</button> <!-- Esto reemplaza completamente el valor previo-->
+
+<!--Usando update modificar el valor en base al actual-->
+<button (click)="contador.update(value => value + 1)">Incrementar con update</button>
+
+
+
+<!-- Ejemplo de valor computed, valores que se actualizan automáticamente-->
+<p>Precio: {{ precio() }}</p>
+<p>Cantidad: {{ cantidad() }}</p>
+<p>Total: {{ total() }}</p>
+
+<button (click)="cantidad.set(cantidad() + 1)">Incrementar cantidad</button>
+<button (click)="precio.set(precio() + 10)">Incrementar precio</button>
+
+<app-carrito-simple></app-carrito-simple>

@@ -1,0 +1,7 @@
+<!-- para mostrar una variable de ts en html {{ variable }}, si es un signal {{ variable() }} -->
+ <h1>Interpolacion</h1>
+    <h2>ejemploNumerico: {{ ejemploNumerico() }}</h2>
+    <button (click)="ejemploNumerico.update((value) => value + 1)">Incrementar</button>
+    <button (click)="ejemploNumerico.update((value) => value - 1)">Decrementar</button>
+
+

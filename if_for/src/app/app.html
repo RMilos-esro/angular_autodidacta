@@ -1,0 +1,16 @@
+@if (edad() >= 18) {
+  <p>Eres mayor de edad</p>
+} @else {
+  <p>Eres menor de edad</p>
+}
+
+<!-- En los for hay que indicar una clave unica con "track" (si no tiene id, el mismo objeto)-->
+
+@for (fruta of []; track fruta) {
+  <li>{{ fruta }}</li>
+} @empty {
+  <li>No hay frutas</li>
+}
+<br />
+
+<app-lista-tareas></app-lista-tareas>

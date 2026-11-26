@@ -1,0 +1,10 @@
+<div
+  [ngClass]="{
+    'circulo-rojo': colorSemaforo() == 'red',
+    'circulo-ambar': colorSemaforo() == 'yellow',
+    'circulo-verde': colorSemaforo() == 'green',
+  }"
+></div>
+<button (click)="cambiarRojo()">Cambiar a rojo</button>
+<button (click)="cambiarAmbar()">Cambiar a ambar</button>
+<button (click)="cambiarVerde()">Cambiar a verde</button>

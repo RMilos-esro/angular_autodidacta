@@ -1,0 +1,24 @@
+<form [formGroup]="registro">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre" />
+    @if (registro.get('nombre')?.invalid && registro.get('nombre')?.touched) {
+      <span class="error">El nombre es requerido y debe tener al menos 4 caracteres</span>
+    }
+  </div>
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" formControlName="correo" />
+    @if (registro.get('correo')?.invalid && registro.get('correo')?.touched) {
+      <span class="error">El correo es requerido y debe ser válido</span>
+    }
+  </div>
+  <div>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" formControlName="mensaje"></textarea>
+    @if (registro.get('mensaje')?.invalid && registro.get('mensaje')?.touched) {
+      <span class="error">El mensaje es requerido y debe tener al menos 10 caracteres</span>
+    }
+  </div>
+  <button type="submit" (click)="enviar()" [disabled]="registro.invalid">Enviar</button>
+</form>

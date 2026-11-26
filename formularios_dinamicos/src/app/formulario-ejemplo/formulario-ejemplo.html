@@ -1,0 +1,5 @@
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+  <input formControlName="nombre" placeholder="Nombre" />
+  <input formControlName="correo" placeholder="Correo" />
+  <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>

@@ -1,0 +1,11 @@
+<ul>
+  @if (listaTareas().length === 0) {
+    <li>Lista de tareas vacía</li>
+  } @else {
+    @for (tarea of listaTareas(); track tarea) {
+      <li>{{ tarea }}</li>
+    }
+  }
+</ul>
+
+<button (click)="vaciarLista()">VACIAR LISTA</button>

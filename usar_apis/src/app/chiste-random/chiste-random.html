@@ -1,0 +1,14 @@
+@if (datos.isLoading()) {
+  <p>La conexión con la API está cargando</p>
+} @else if (datos.error()) {
+  <p>Ocurrió un error al obtener el chiste. Intenta de nuevo.</p>
+} @else {
+  @if (datos.value()?.type === "twopart") {
+    <h1>{{ datos.value()?.setup }}</h1>
+    <h2>{{ datos.value()?.delivery }}</h2>
+  } @else {
+    <h1>{{ datos.value()?.joke }}</h1>
+  }
+}
+<br>
+<button (click)="pedirChiste()">Pedir Chiste</button>
